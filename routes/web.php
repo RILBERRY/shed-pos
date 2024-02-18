@@ -1,5 +1,7 @@
 <?php
 
+use App\Http\Middleware\AdminAuthorized;
+use App\Http\Middleware\AdminAuthorizedCompleted;
 use Illuminate\Support\Facades\Route;
 
 /*
@@ -13,6 +15,17 @@ use Illuminate\Support\Facades\Route;
 |
 */
 
-Route::get('/', function () {
-    return view('welcome');
+Route::middleware(AdminAuthorized::class)->group(function(){
+
+    Route::get('/dashboard', function () {
+        return view('admin.dashboard');
+    });
+    Route::get('/billing', function () {
+        return view('admin.billing');
+    });
+});
+Route::middleware(AdminAuthorizedCompleted::class)->group(function(){
+    Route::get('/admin-approve', function () {
+        return view('waiting-admin-approve');
+    });
 });

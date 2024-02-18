@@ -4,11 +4,7 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    {{-- <link rel="stylesheet" href="{{asset('inc/Portal-main.css')}}"> --}}
     @vite(['resources/css/app.css','resources/js/app.js'])
-
-    <script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-9427898748394345"
-     crossorigin="anonymous"></script>
     <title>Shed-POS</title>
 </head>
 <body>
@@ -21,33 +17,10 @@
             </div>
             <h2 class=" text-center font-bold text-3xl text-white ">Shed POS</h2>
         </div>
-        <form class="flex flex-col m-10 mx-auto justify-center w-10/12 md:w-3/4 xl:w-2/4 bg-gray-100 p-5 md:p-10 rounded-md  " action="/login" method="POST">
-            @csrf
-            <h3 class="text-center p-2 font-bold text-xl text-gray-500 ">WELCOME </h3>
-            @if ($errors->any())
-            <div class="flex items-center p-4 mb-4 text-sm text-red-800 border border-red-300 rounded-lg bg-red-50 dark:bg-gray-800 dark:text-red-400 dark:border-red-800" role="alert">
-                <svg class="flex-shrink-0 inline w-4 h-4 mr-3" aria-hidden="true" xmlns="http://www.w3.org/2000/svg" fill="currentColor" viewBox="0 0 20 20">
-                    <path d="M10 .5a9.5 9.5 0 1 0 9.5 9.5A9.51 9.51 0 0 0 10 .5ZM9.5 4a1.5 1.5 0 1 1 0 3 1.5 1.5 0 0 1 0-3ZM12 15H8a1 1 0 0 1 0-2h1v-3H8a1 1 0 0 1 0-2h2a1 1 0 0 1 1 1v4h1a1 1 0 0 1 0 2Z"/>
-                </svg>
-                <span class="sr-only">Info</span>
-                <div>
-                    <span class="font-medium">Danger alert!</span><br>
-                    @foreach ($errors->all() as $error)
-                        <li>{{ $error }}</li>
-                    @endforeach
-                </div>
-            </div>
-            @endif
-            <div class="relative m-2">
-                <input type="text" id="email" class="block px-2.5 pb-2.5 pt-4 w-full text-sm text-gray-900 bg-white rounded-lg border-1 border-gray-300 appearance-none dark:text-white dark:border-gray-600 dark:focus:border-blue-500 focus:outline-none focus:ring-0 focus:border-blue-600 peer" placeholder="" name="email" required />
-                <label for="email" class="absolute text-sm text-gray-500 dark:text-gray-400 duration-300 transform -translate-y-4 scale-75 top-2 z-10 origin-[0] bg-white dark:bg-gray-900 px-2 peer-focus:px-2 peer-focus:text-blue-600 peer-focus:dark:text-blue-500 peer-placeholder-shown:scale-100 peer-placeholder-shown:-translate-y-1/2 peer-placeholder-shown:top-1/2 peer-focus:top-2 peer-focus:scale-75 peer-focus:-translate-y-4 left-1">Email</label>
-            </div>
-            <div class="relative m-2">
-                <input type="password" id="password" class="block px-2.5 pb-2.5 pt-4 w-full text-sm text-gray-900 bg-white rounded-lg border-1 border-gray-300 appearance-none dark:text-white dark:border-gray-600 dark:focus:border-blue-500 focus:outline-none focus:ring-0 focus:border-blue-600 peer" placeholder="" name="password" required />
-                <label for="password" class="absolute text-sm text-gray-500 dark:text-gray-400 duration-300 transform -translate-y-4 scale-75 top-2 z-10 origin-[0] bg-white dark:bg-gray-900 px-2 peer-focus:px-2 peer-focus:text-blue-600 peer-focus:dark:text-blue-500 peer-placeholder-shown:scale-100 peer-placeholder-shown:-translate-y-1/2 peer-placeholder-shown:top-1/2 peer-focus:top-2 peer-focus:scale-75 peer-focus:-translate-y-4 left-1">Password</label>
-            </div>
-            <button type="submit" class=" m-2 p-2 rounded-md bg-blue-600 hover:bg-blue-500 text-white font-semibold " name="LoginBtn">LOGIN</button>
-        </form>
+        <div class="flex flex-col m-10 mx-auto justify-center w-10/12 md:w-3/4 xl:w-2/4 p-5 md:p-10 rounded-md ">
+            <h2 class=" text-center font-bold text-3xl text-white ">Waiting for Admin Approval</h2>
+
+        </div>
        </div>
         <div class="hidden md:flex w-2/4 align-middle justify-center ">
             {{-- <img src="img/muli-shed.jpg" class="object-cover  " alt="" srcset=""> --}}
