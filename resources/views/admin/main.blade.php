@@ -29,49 +29,7 @@
                 <span class="self-center text-xl text-white font-semibold md:text-2xl whitespace-nowrap dark:text-white md:hidden">FMS</span>
               </a>
             </div>
-            <div class="flex items-center">
-                <div class="flex items-center ml-3">
-                  <div>
-                    <button type="button" class="flex text-sm bg-gray-800 rounded-full focus:ring-4 focus:ring-gray-300 dark:focus:ring-gray-600" aria-expanded="false" data-dropdown-toggle="dropdown-user">
-                      <span class="sr-only">Open user menu</span>
-                      <img class="w-8 h-8 rounded-full" src="/default_user.jpg" alt="user photo">
-                    </button>
-                  </div>
-                  <div class="z-50 hidden my-4 p-4  text-base list-none bg-blue-600 border-t-gray-100 divide-y divide-gray-100 rounded shadow dark:bg-gray-700 dark:divide-gray-600" id="dropdown-user">
-                     <div class="px-4 py-3" role="none">
-                        <p class="text-sm text-white dark:text-white" role="none">
-                        {{ auth()->user()->name}}
-                        </p>
-                        <p class="text-sm font-medium text-white truncate dark:text-gray-300" role="none">
-                        {{ auth()->user()->email}}
-                        </p>
-                     </div>
-                     {{-- <ul class="py-1" role="none">
-                        <button type="button" class="flex items-center w-full p-2 text-base text-white hover:text-gray-800 transition duration-75 rounded-lg group hover:bg-gray-100 dark:text-white dark:hover:bg-gray-700" aria-controls="swithch-sub-menu" data-collapse-toggle="swithch-sub-menu">
-                           <svg class="flex-shrink-0 w-5 h-5 text-white hover:text-gray-600 transition duration-75 dark:text-gray-400 group-hover:text-gray-900 dark:group-hover:text-white" aria-hidden="true" xmlns="http://www.w3.org/2000/svg" fill="currentColor" viewBox="0 0 20 18">
-                                 <path d="M13.383.076a1 1 0 0 0-1.09.217L11 1.586 9.707.293a1 1 0 0 0-1.414 0L7 1.586 5.707.293a1 1 0 0 0-1.414 0L3 1.586 1.707.293A1 1 0 0 0 0 1v18a1 1 0 0 0 1.707.707L3 18.414l1.293 1.293a1 1 0 0 0 1.414 0L7 18.414l1.293 1.293a1 1 0 0 0 1.414 0L11 18.414l1.293 1.293A1 1 0 0 0 14 19V1a1 1 0 0 0-.617-.924ZM10 15H4a1 1 0 1 1 0-2h6a1 1 0 0 1 0 2Zm0-4H4a1 1 0 1 1 0-2h6a1 1 0 1 1 0 2Zm0-4H4a1 1 0 0 1 0-2h6a1 1 0 1 1 0 2Z"/>
-                           </svg>
-                              <span class="flex-1 ml-3 text-left whitespace-nowrap">SWITCH SALES POINT</span>
-                              <svg class="w-3 h-3" aria-hidden="true" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 10 6">
-                                 <path stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="m1 1 4 4 4-4"/>
-                              </svg>
-                        </button>
-                        <ul id="swithch-sub-menu" class="hidden py-2 space-y-2 text-sm">
-                              <li>
-                                 <a href="#" class="flex hover:pl-14 items-center w-full p-2 text-white hover:text-gray-800 transition duration-75 rounded-lg pl-11 group hover:bg-gray-100 dark:text-white dark:hover:bg-gray-700">HAKATHA</a>
-                              </li>
-                              <li>
-                                 <a href="#" class="flex hover:pl-14 items-center w-full p-2 text-white hover:text-gray-800 transition duration-75 rounded-lg pl-11 group hover:bg-gray-100 dark:text-white dark:hover:bg-gray-700">ISDHOO SHED</a>
-                              </li>
-                              <li>
-                                 <a href="#" class="flex hover:pl-14 items-center w-full p-2 text-white hover:text-gray-800 transition duration-75 rounded-lg pl-11 group hover:bg-gray-100 dark:text-white dark:hover:bg-gray-700">MULI SHED</a>
-                              </li>
-                        </ul>
-                     </ul> --}}
-                  </div>
-                </div>
-              </div>
-          </div>
+
         </div>
       </nav>
 
@@ -79,7 +37,7 @@
          <div class="h-full px-3 py-4 overflow-y-auto bg-blue-600 dark:bg-gray-800 ">
             <div class="flex flex-col gap-5 text-white text-center pb-10">
                <div class="flex flex-col">
-                     <img src="{{ asset('/default_user.jpg')}}" class=" rounded-full mx-auto" height="150" width="150" alt="" srcset="">
+                     <img src="{{ asset('/default_user.png')}}" class=" rounded-full mx-auto" height="150" width="150" alt="" srcset="">
                      <div class="UserName">
                         <h5>{{Auth()->user()->name}}</h5>
                         {{-- <h5>Genaral Manager / Accountant</h5> --}}

@@ -15,16 +15,21 @@ use Illuminate\Support\Facades\Route;
 |
 */
 
-Route::middleware(AdminAuthorized::class)->group(function(){
+Route::middleware(['auth' ,AdminAuthorized::class])->group(function(){
 
     Route::get('/dashboard', function () {
         return view('admin.dashboard');
+    });
+    Route::prefix('/transaction')->group(function()  {
+        Route::get('/invoice', function () {
+            return view('admin.invoice');
+        });
     });
     Route::get('/billing', function () {
         return view('admin.billing');
     });
 });
-Route::middleware(AdminAuthorizedCompleted::class)->group(function(){
+Route::middleware(['auth', AdminAuthorizedCompleted::class])->group(function(){
     Route::get('/admin-approve', function () {
         return view('waiting-admin-approve');
     });
