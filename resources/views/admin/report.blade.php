@@ -3,7 +3,7 @@
     <div class="w-full p-2.5 flex-col justify-start items-center gap-2.5 inline-flex ">
         <div class="w-full flex justify-center flex-wrap items-start gap-4 bg-white p-5 rounded-xl">
             <div class="flex justify-between w-full mx-auto">
-                <h3 class=" p-5 my-auto text-2xl text-gray-500">BILLINGS</h3>
+                <h3 class=" p-5 my-auto text-2xl text-gray-500">REPORTS</h3>
             </div>
 
             {{-- @can('billing.form.delivery-note') --}}

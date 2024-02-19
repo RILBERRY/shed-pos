@@ -75,9 +75,9 @@
                         </svg>
                   </button>
                   <ul id="transaction-sub-menu" class="hidden py-2 space-y-2 text-sm">
-                     {{-- @can('portal.invoice') --}}
+                     {{-- @can('portal.quotation') --}}
                      <li>
-                        <a href="/transaction/invoice" class="flex items-center w-full p-2 text-white hover:text-gray-800 hover:pl-14 transition duration-75 rounded-lg pl-11 group hover:bg-gray-100 dark:text-white dark:hover:bg-gray-700">INVOICE</a>
+                        <a href="/transaction/quotation" class="flex items-center w-full p-2 text-white hover:text-gray-800 hover:pl-14 transition duration-75 rounded-lg pl-11 group hover:bg-gray-100 dark:text-white dark:hover:bg-gray-700">QUOTATION</a>
                      </li>
                      {{-- @endcan --}}
 
@@ -87,27 +87,33 @@
                      </li>
                      {{-- @endcan --}}
 
+                     {{-- @can('portal.invoice') --}}
+                     <li>
+                        <a href="/transaction/invoice" class="flex items-center w-full p-2 text-white hover:text-gray-800 hover:pl-14 transition duration-75 rounded-lg pl-11 group hover:bg-gray-100 dark:text-white dark:hover:bg-gray-700">INVOICE</a>
+                     </li>
+                     {{-- @endcan --}}
+
                      {{-- @can('portal.purchases') --}}
                      <li>
-                        <a href="/transaction/purchases" class="flex items-center w-full p-2 text-white hover:text-gray-800 hover:pl-14 transition duration-75 rounded-lg pl-11 group hover:bg-gray-100 dark:text-white dark:hover:bg-gray-700">PURCHASES</a>
+                        <a href="/transaction/purchase" class="flex items-center w-full p-2 text-white hover:text-gray-800 hover:pl-14 transition duration-75 rounded-lg pl-11 group hover:bg-gray-100 dark:text-white dark:hover:bg-gray-700">PURCHASES</a>
                      </li>
                      {{-- @endcan --}}
 
                      {{-- @can('portal.expenses') --}}
                      <li>
-                        <a href="/transaction/expenses" class="flex items-center w-full p-2 text-white hover:text-gray-800 hover:pl-14 transition duration-75 rounded-lg pl-11 group hover:bg-gray-100 dark:text-white dark:hover:bg-gray-700">EXPENSES</a>
+                        <a href="/transaction/expense" class="flex items-center w-full p-2 text-white hover:text-gray-800 hover:pl-14 transition duration-75 rounded-lg pl-11 group hover:bg-gray-100 dark:text-white dark:hover:bg-gray-700">EXPENSES</a>
                      </li>
                      {{-- @endcan --}}
 
                      {{-- @can('portal.cashFlow') --}}
                      <li>
-                        <a href="/transaction/cashflow" class="flex items-center w-full p-2 text-white hover:text-gray-800 hover:pl-14 transition duration-75 rounded-lg pl-11 group hover:bg-gray-100 dark:text-white dark:hover:bg-gray-700">CASH-FLOW</a>
+                        <a href="/transaction/cash-flow" class="flex items-center w-full p-2 text-white hover:text-gray-800 hover:pl-14 transition duration-75 rounded-lg pl-11 group hover:bg-gray-100 dark:text-white dark:hover:bg-gray-700">CASH-FLOW</a>
                      </li>
                      {{-- @endcan --}}
 
                      {{-- @can('portal.closing.closeSales') --}}
                      <li>
-                        <a href="/transaction/closing" class="flex items-center w-full p-2 text-white hover:text-gray-800 hover:pl-14 transition duration-75 rounded-lg pl-11 group hover:bg-gray-100 dark:text-white dark:hover:bg-gray-700">SALES CLOSING</a>
+                        <a href="/transaction/sale-closing" class="flex items-center w-full p-2 text-white hover:text-gray-800 hover:pl-14 transition duration-75 rounded-lg pl-11 group hover:bg-gray-100 dark:text-white dark:hover:bg-gray-700">SALES CLOSING</a>
                      </li>
                      {{-- @endcan --}}
                   </ul>
@@ -135,10 +141,10 @@
                   </button>
                   <ul id="setting-sub-menu" class="hidden py-2 space-y-2 text-sm">
                         <li>
-                           <a href="/users" class="flex items-center w-full p-2 text-white hover:text-gray-800  hover:pl-14 transition duration-75 rounded-lg pl-11 group hover:bg-gray-100 dark:text-white dark:hover:bg-gray-700">USERS</a>
+                           <a href="/setting/user" class="flex  items-center w-full p-2 text-white hover:text-gray-800  hover:pl-14 transition duration-75 rounded-lg pl-11 group hover:bg-gray-100 dark:text-white dark:hover:bg-gray-700">USERS</a>
                         </li>
                         <li>
-                           <a href="/roles" class="flex items-center w-full p-2 text-white hover:text-gray-800 hover:pl-14 transition duration-75 rounded-lg pl-11 group hover:bg-gray-100 dark:text-white dark:hover:bg-gray-700">ROLES & PERMISSIONS</a>
+                           <a href="/setting/role" class="flex items-center w-full p-2 text-white hover:text-gray-800 hover:pl-14 transition duration-75 rounded-lg pl-11 group hover:bg-gray-100 dark:text-white dark:hover:bg-gray-700">ROLES & PERMISSIONS</a>
                         </li>
                   </ul>
                </li>
@@ -157,6 +163,7 @@
          </div>
       </aside>
 
+         @livewire('wire-elements-modal')
       <div class="p-4 md:ml-64 mt-20">
         @yield('content')
       </div>

@@ -21,13 +21,44 @@ Route::middleware(['auth' ,AdminAuthorized::class])->group(function(){
         return view('admin.dashboard');
     });
     Route::prefix('/transaction')->group(function()  {
+        Route::get('/quotation', function () {
+            return view('admin.quotation');
+        });
+        Route::get('/delivery', function () {
+            return view('admin.delivery');
+        });
         Route::get('/invoice', function () {
             return view('admin.invoice');
+        });
+        Route::get('/purchase', function () {
+            return view('admin.purchase');
+        });
+        Route::get('/expense', function () {
+            return view('admin.expense');
+        });
+        Route::get('/cash-flow', function () {
+            return view('admin.cash-flow');
+        });
+        Route::get('/sale-closing', function () {
+            return view('admin.sale-closing');
         });
     });
     Route::get('/billing', function () {
         return view('admin.billing');
     });
+    Route::get('/report', function () {
+        return view('admin.report');
+    });
+
+    Route::prefix('/setting')->group(function(){
+        Route::get('/user', function () {
+            return view('admin.user');
+        });
+        Route::get('/role', function () {
+            return view('admin.role');
+        });
+    });
+
 });
 Route::middleware(['auth', AdminAuthorizedCompleted::class])->group(function(){
     Route::get('/admin-approve', function () {

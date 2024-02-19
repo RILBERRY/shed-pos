@@ -1,6 +1,6 @@
 <div class=" bg-white rounded-md w-full md:w-[90%] p-2 md:p-5 md:mx-auto ">
     <div class="flex flex-col md:flex-row justify-between w-full mx-auto">
-        <h3 class=" p-2 my-auto text-2xl text-gray-500">INVOICES</h3>
+        <h3 class=" p-2 my-auto text-2xl text-gray-500">USERS</h3>
          <div class="flex gap-2 pb-2">
             <div class="relative my-auto w-full md:w-64 ">
                 <div class="absolute inset-y-0 start-0 flex items-center ps-3 pointer-events-none">
@@ -114,7 +114,7 @@
 
             </table>
         </div>
-        {{ $invoices->links('pagination-livewire') }}
+        {{-- {{ $invoices->links('pagination-livewire') }} --}}
 
     </div>
 

@@ -1,7 +1,7 @@
 <div class=" bg-white rounded-md w-full md:w-[90%] p-2 md:p-5 md:mx-auto ">
     <div class="flex flex-col md:flex-row justify-between w-full mx-auto">
-        <h3 class=" p-2 my-auto text-2xl text-gray-500">INVOICES</h3>
-         <div class="flex gap-2 pb-2">
+        <h3 class=" p-2 my-auto text-2xl text-gray-500">DELIVERY NOTE</h3>
+        <div class="flex gap-2 pb-2">
             <div class="relative my-auto w-full md:w-64 ">
                 <div class="absolute inset-y-0 start-0 flex items-center ps-3 pointer-events-none">
                     <svg class="w-4 h-4 text-gray-500 dark:text-gray-400" aria-hidden="true" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 20 20">
@@ -26,17 +26,12 @@
                         </th>
                         <th scope="col" class="px-6 py-3">
                             <div class="flex items-center">
-                                INV NO
+                                DN NO
                             </div>
                         </th>
                         <th scope="col" class="px-6 py-3">
                             <div class="flex items-center">
                                 CUSTOMER NAME
-                            </div>
-                        </th>
-                        <th scope="col" class="px-6 py-3">
-                            <div class="flex items-center" wire:click="sortBy('billno')">
-                                BILL NO
                             </div>
                         </th>
                         <th scope="col" class="px-6 py-3 text-center">
@@ -69,9 +64,6 @@
                         <td class="px-6 py-4">
                             CUSTOMER
                         </td>
-                        <td class="px-6 py-4">
-                            INV 1234
-                        </td>
                         <td class="px-6 py-4 text-center">
                             MVR 102,332.11
                         </td>
@@ -79,7 +71,7 @@
                             PAID
                         </td>
                         <td class="px-6 py-4 text-center">
-                            <button  class="mx-auto block w-full md:w-auto text-white bg-blue-700 hover:bg-blue-800 focus:ring-4 focus:outline-none focus:ring-blue-300 font-medium rounded-lg text-sm px-5 py-2.5 text-center dark:bg-blue-600 dark:hover:bg-blue-700 dark:focus:ring-blue-800" type="button" >
+                            <button  class=" mx-auto block w-full md:w-auto text-white bg-blue-700 hover:bg-blue-800 focus:ring-4 focus:outline-none focus:ring-blue-300 font-medium rounded-lg text-sm px-5 py-2.5 text-center dark:bg-blue-600 dark:hover:bg-blue-700 dark:focus:ring-blue-800" type="button" >
                                 Edit
                             </button>
                         </td>
@@ -94,9 +86,6 @@
                         <td class="px-6 py-4">
                             CUSTOMER
                         </td>
-                        <td class="px-6 py-4">
-                            INV 1234
-                        </td>
                         <td class="px-6 py-4 text-center">
                             MVR 102,332.11
                         </td>
@@ -104,7 +93,7 @@
                             PAID
                         </td>
                         <td class="px-6 py-4 text-center">
-                            <button  class="mx-auto block w-full md:w-auto text-white bg-blue-700 hover:bg-blue-800 focus:ring-4 focus:outline-none focus:ring-blue-300 font-medium rounded-lg text-sm px-5 py-2.5 text-center dark:bg-blue-600 dark:hover:bg-blue-700 dark:focus:ring-blue-800" type="button" >
+                            <button  class=" mx-auto block w-full md:w-auto text-white bg-blue-700 hover:bg-blue-800 focus:ring-4 focus:outline-none focus:ring-blue-300 font-medium rounded-lg text-sm px-5 py-2.5 text-center dark:bg-blue-600 dark:hover:bg-blue-700 dark:focus:ring-blue-800" type="button" >
                                 Edit
                             </button>
                         </td>
@@ -114,7 +103,7 @@
 
             </table>
         </div>
-        {{ $invoices->links('pagination-livewire') }}
+        {{-- {{ $invoices->links('pagination-livewire') }} --}}
 
     </div>
 
