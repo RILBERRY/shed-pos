@@ -77,6 +77,11 @@
                   <ul id="transaction-sub-menu" class="hidden py-2 space-y-2 text-sm">
                      {{-- @can('portal.quotation') --}}
                      <li>
+                        <a href="/transaction/customer" class="flex items-center w-full p-2 text-white hover:text-gray-800 hover:pl-14 transition duration-75 rounded-lg pl-11 group hover:bg-gray-100 dark:text-white dark:hover:bg-gray-700">CUSTOMER</a>
+                     </li>
+                     {{-- @endcan --}}
+                     {{-- @can('portal.quotation') --}}
+                     <li>
                         <a href="/transaction/quotation" class="flex items-center w-full p-2 text-white hover:text-gray-800 hover:pl-14 transition duration-75 rounded-lg pl-11 group hover:bg-gray-100 dark:text-white dark:hover:bg-gray-700">QUOTATION</a>
                      </li>
                      {{-- @endcan --}}

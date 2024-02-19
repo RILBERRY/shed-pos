@@ -17,7 +17,9 @@ return new class extends Migration
             $table->string('name');
             $table->string('tin')->nullable();
             $table->string('contact')->nullable();
+            $table->string('email')->nullable();
             $table->boolean('is_blocked')->default(false);
+            $table->string('block_reason')->nullable();
             $table->timestamps();
         });
     }

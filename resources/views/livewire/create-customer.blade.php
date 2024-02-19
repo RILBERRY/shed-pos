@@ -29,20 +29,12 @@
                             placeholder="Client Name" required>
                     @error('supplyer.name') <span class=" text-red-800">Name is required</span> @enderror
                     </div>
-                    @if($searchResults)
-                    <div class="col-span-2 max-h-32 overflow-scroll bg-gray-200 p-2 rounded-md">
-                        <ul class="flex flex-col gap-2 w-full">
-                            @foreach ($searchResults as $result)
-                                <button class="w-full p-2 bg-gray-300 hover:bg-gray-400 rounded-md" wire:click="setSearchName('{{ $result->id }}')">{{ $result->name }}</button>
-                            @endforeach
-                        </ul>
-                    </div>
-                    @endif
+
 
                     <div class="col-span-2 sm:col-span-1">
-                        <label for="company_name"
+                        <label for="name"
                             class="block mb-2 text-sm font-medium text-gray-900 dark:text-white">Company Name </label>
-                        <input type="text" wire:model="modelData.company_name" id="company_name"
+                        <input type="text" wire:model="modelData.name" id="name"
                             class="bg-gray-50 border border-gray-300 text-gray-900 text-sm rounded-lg focus:ring-primary-600 focus:border-primary-600 block w-full p-2.5 dark:bg-gray-600 dark:border-gray-500 dark:placeholder-gray-400 dark:text-white dark:focus:ring-primary-500 dark:focus:border-primary-500"
                             placeholder="Company Name">
                     </div>
@@ -69,7 +61,21 @@
                             placeholder="Email">
                     </div>
                     <div class="col-span-2 sm:col-span-1">
+                        <label for="email"
+                            class="block mb-2 text-sm font-medium text-gray-900 dark:text-white">Products</label>
+                        <input type="text" wire:model="modelData.email" id="email"
+                            class="bg-gray-50 border border-gray-300 text-gray-900 text-sm rounded-lg focus:ring-primary-600 focus:border-primary-600 block w-full p-2.5 dark:bg-gray-600 dark:border-gray-500 dark:placeholder-gray-400 dark:text-white dark:focus:ring-primary-500 dark:focus:border-primary-500"
+                            placeholder="Products">
+                    </div>
+                    <div class="col-span-2 sm:col-span-1">
+                        <label for="email"
+                            class="block mb-2 text-sm font-medium text-gray-900 dark:text-white">Rate</label>
+                        <input type="text" wire:model="modelData.email" id="email"
+                            class="bg-gray-50 border border-gray-300 text-gray-900 text-sm rounded-lg focus:ring-primary-600 focus:border-primary-600 block w-full p-2.5 dark:bg-gray-600 dark:border-gray-500 dark:placeholder-gray-400 dark:text-white dark:focus:ring-primary-500 dark:focus:border-primary-500"
+                            placeholder="Rate">
 
+                    </div>
+                    <div class="col-span-2 sm:col-span-1">
                         <label class="relative inline-flex items-center cursor-pointer">
                             <input type="checkbox" wire:model='modelData.is_blocked' value="" class="sr-only peer" wire:model.change="blockStatus">
                             <div
@@ -77,8 +83,8 @@
                             </div>
                             <span class="ms-3 text-sm font-medium text-gray-900 dark:text-gray-300">Block Client</span>
                         </label>
-                    </div>
 
+                    </div>
                     <div class="col-span-2 ">
                         <label for="blocked_reason"
                             class="block mb-2 text-sm font-medium text-gray-900 dark:text-white">Blocked

@@ -21,6 +21,9 @@ Route::middleware(['auth' ,AdminAuthorized::class])->group(function(){
         return view('admin.dashboard');
     });
     Route::prefix('/transaction')->group(function()  {
+        Route::get('/customer', function () {
+            return view('admin.customer');
+        });
         Route::get('/quotation', function () {
             return view('admin.quotation');
         });
