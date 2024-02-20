@@ -12,13 +12,13 @@ class BaseLivewire extends ModalComponent
     protected $rules;
     protected $savedModel;
     protected $reload;
+    protected $backComponent;
     protected $reloadRouteName;
 
-     function mount($id=null, $reload = true)
+     function mount($id=null, $reloadRouteName = null)
     {
         $model = app()->make($this->model);
 
-        $this->reload = $reload;
         if($id){
             $this->modelData = $model::find($id)->toArray();
         }
@@ -32,7 +32,7 @@ class BaseLivewire extends ModalComponent
         if( $this->reloadRouteName ){
             return redirect(route($this->reloadRouteName));
         }
-
+        $this->closeModalWithEvents($this->backComponent);
     }
 
     public function update()
@@ -44,6 +44,7 @@ class BaseLivewire extends ModalComponent
         if( $this->reloadRouteName ){
             return redirect(route($this->reloadRouteName));
         }
+        $this->closeModalWithEvents($this->backComponent);
 
     }
 

@@ -17,6 +17,7 @@ return new class extends Migration
             $table->string('name');
             $table->string('type');
             $table->decimal('rate',6,2);
+            $table->boolean('is_active')->default(1);
             $table->timestamps();
         });
     }

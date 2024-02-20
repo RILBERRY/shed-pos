@@ -20,32 +20,27 @@
                 <thead class="text-xs text-gray-700 uppercase bg-gray-50 dark:bg-gray-700 dark:text-gray-400">
                     <tr>
                         <th scope="col" class="px-6 py-3" >
-                            <div class="flex items-center" wire:click="sortBy('date')">
-                                DATE
+                            <div class="flex cursor-pointer items-center" wire:click="sortBy('code')">
+                                CODE
                             </div>
                         </th>
                         <th scope="col" class="px-6 py-3">
-                            <div class="flex items-center">
-                                QUOTATION NO
-                            </div>
-                        </th>
-                        <th scope="col" class="px-6 py-3">
-                            <div class="flex items-center">
-                                CUSTOMER NAME
+                            <div class="flex cursor-pointer items-center" wire:click="sortBy('name')">
+                                NAME
                             </div>
                         </th>
                         <th scope="col" class="px-6 py-3 text-center">
-                            <div class="flex justify-center">
-                                AMOUNT
+                            <div class="flex cursor-pointer justify-center">
+                                CONTACT
                             </div>
                         </th>
                         <th scope="col" class="px-6 py-3 text-center">
-                            <div class="flex justify-center">
+                            <div class="flex cursor-pointer justify-center">
                                 STATUS
                             </div>
                         </th>
                         <th scope="col" class="px-6 py-3 text-center ">
-                            <div class="flex justify-center">
+                            <div class="flex cursor-pointer justify-center">
                                 ACTION
                             </div>
                         </th>
@@ -53,57 +48,33 @@
                     </tr>
                 </thead>
                 <tbody class=" overflow-scroll scrollbar-hide">
-                    {{-- @foreach ($invoices as $invoice) --}}
+                    @foreach ($customers as $customer)
                     <tr class="bg-white border-b dark:bg-gray-800 dark:border-gray-700">
                         <td class="px-6 py-4">
-                            12-12-2023
-                        </td>
-                        <td class="px-6 py-4 w-fit">
-                            INV-2024-2323
+                            {{$customer->code}}
                         </td>
                         <td class="px-6 py-4">
-                            CUSTOMER
+                            {{$customer->name}}
                         </td>
                         <td class="px-6 py-4 text-center">
-                            MVR 102,332.11
+                            {{$customer->tin}}
                         </td>
                         <td class="px-6 py-4 text-center">
                             PAID
                         </td>
                         <td class="px-6 py-4 text-center">
-                            <button  class=" mx-auto block w-full md:w-auto text-white bg-blue-700 hover:bg-blue-800 focus:ring-4 focus:outline-none focus:ring-blue-300 font-medium rounded-lg text-sm px-5 py-2.5 text-center dark:bg-blue-600 dark:hover:bg-blue-700 dark:focus:ring-blue-800" type="button" >
+                            <button  wire:click="$dispatch('openModal', { component: 'create-customer', arguments: {id: {{$customer->id}}}})" class=" mx-auto block w-full md:w-auto text-white bg-blue-700 hover:bg-blue-800 focus:ring-4 focus:outline-none focus:ring-blue-300 font-medium rounded-lg text-sm px-5 py-2.5 text-center dark:bg-blue-600 dark:hover:bg-blue-700 dark:focus:ring-blue-800" type="button" >
                                 Edit
                             </button>
                         </td>
                     </tr>
-                    <tr class="bg-white border-b dark:bg-gray-800 dark:border-gray-700">
-                        <td class="px-6 py-4">
-                            12-12-2023
-                        </td>
-                        <td class="px-6 py-4 w-fit">
-                            INV-2024-2323
-                        </td>
-                        <td class="px-6 py-4">
-                            CUSTOMER
-                        </td>
-                        <td class="px-6 py-4 text-center">
-                            MVR 102,332.11
-                        </td>
-                        <td class="px-6 py-4 text-center">
-                            PAID
-                        </td>
-                        <td class="px-6 py-4 text-center">
-                            <button  class=" mx-auto block w-full md:w-auto text-white bg-blue-700 hover:bg-blue-800 focus:ring-4 focus:outline-none focus:ring-blue-300 font-medium rounded-lg text-sm px-5 py-2.5 text-center dark:bg-blue-600 dark:hover:bg-blue-700 dark:focus:ring-blue-800" type="button" >
-                                Edit
-                            </button>
-                        </td>
-                    </tr>
-                    {{-- @endforeach --}}
+
+                    @endforeach
                 </tbody>
 
             </table>
         </div>
-        {{-- {{ $invoices->links('pagination-livewire') }} --}}
+        {{ $customers->links('pagination-livewire') }}
 
     </div>
 
