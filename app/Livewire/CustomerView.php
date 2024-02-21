@@ -22,16 +22,16 @@ class CustomerView extends Component
         }
         $this->sortField = $sortField;
     }
-    #[On('load')]
-    function getCustomers()
+    #[On('updateCustomer')]
+    public function updateCustomers()
     {
-        return Customer::orderBy($this->sortField, $this->sortType)->paginate(15);
+        return  Customer::orderBy($this->sortField, $this->sortType)->paginate(15);
     }
 
 
     public function render()
     {
-        $customers = $this->getCustomers();
-        return view('livewire.customer-view', compact('customers'));
+        $customers = $this->updateCustomers();
+        return view('livewire.customer-view',compact('customers'));
     }
 }

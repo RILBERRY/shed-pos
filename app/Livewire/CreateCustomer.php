@@ -10,9 +10,7 @@ class CreateCustomer extends BaseLivewire
     public $products;
     public function __construct($id=null)
     {
-        $this->backComponent = [
-            CreateCustomer::class => 'load'
-        ];
+        $this->backComponent = [CustomerView::class => 'updateCustomer'];
         $this->model = Customer::class;
         $this->modelData=[
             'id' => null,
