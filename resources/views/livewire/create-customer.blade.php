@@ -38,8 +38,7 @@
                     </div>
                     <div class="col-span-2 sm:col-span-1">
                         <label for="contact"
-                            class="block mb-2 text-sm font-medium text-gray-900 dark:text-white">Contact Number <span
-                                class="text-red-500 ">*</span></label>
+                            class="block mb-2 text-sm font-medium text-gray-900 dark:text-white">Contact Number</label>
                         <input type="number" wire:model="modelData.contact" id="contact"
                             class="bg-gray-50 border border-gray-300 text-gray-900 text-sm rounded-lg focus:ring-primary-600 focus:border-primary-600 block w-full p-2.5 dark:bg-gray-600 dark:border-gray-500 dark:placeholder-gray-400 dark:text-white dark:focus:ring-primary-500 dark:focus:border-primary-500"
                             placeholder="Contact">
@@ -85,7 +84,7 @@
                         <label for="blocked_reason"
                             class="block mb-2 text-sm font-medium text-gray-900 dark:text-white">Blocked
                             Reason</label>
-                        <input type="text" wire:model="modelData.blocked_reason" id="blocked_reason"
+                        <input type="text" wire:model="modelData.block_reason" id="blocked_reason"
                             class="bg-gray-50 border border-gray-300 text-gray-900 text-sm rounded-lg focus:ring-primary-600 focus:border-primary-600 block w-full p-2.5 dark:bg-gray-600 dark:border-gray-500 dark:placeholder-gray-400 dark:text-white dark:focus:ring-primary-500 dark:focus:border-primary-500"
                             placeholder="Blocked reason">
                     </div>

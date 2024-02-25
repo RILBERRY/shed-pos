@@ -28,6 +28,7 @@ class CreateCustomer extends BaseLivewire
                 'modelData.tin' => 'nullable',
                 'modelData.conact' => 'nullable',
                 'modelData.email' => 'nullable',
+                'modelData.is_blocked' => 'nullable',
                 'modelData.block_reason' => 'nullable',
         ];
 

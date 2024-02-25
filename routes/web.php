@@ -68,3 +68,6 @@ Route::middleware(['auth', AdminAuthorizedCompleted::class])->group(function(){
         return view('waiting-admin-approve');
     });
 });
+Route::get('/', function () {
+    return redirect('/login');
+});
